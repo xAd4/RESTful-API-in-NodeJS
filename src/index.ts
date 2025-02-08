@@ -3,6 +3,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import cors from "cors";
 import fileUpload from "express-fileupload";
+import { connectDB } from "../config/db";
 require("dotenv").config();
 
 const app = express();
@@ -29,3 +30,6 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server ${PORT} running`);
 });
+
+// Conectar la base de datos
+connectDB();

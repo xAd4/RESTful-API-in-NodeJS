@@ -7,12 +7,18 @@ import {
   deleteCategory,
 } from "../controllers/CategoryController";
 
+import {
+  validateGetByIdCategory,
+  validatePostCategory,
+  validatePutAndDeleteCategory,
+} from "../helpers/general-validators";
+
 const router = express.Router();
 
 router.get("/", getCategory);
-router.get("/:id", getCategoryById);
-router.post("/", createCategory);
-router.put("/:id", updateCategory);
-router.delete("/:id", deleteCategory);
+router.get("/:id", validateGetByIdCategory, getCategoryById);
+router.post("/", validatePostCategory, createCategory);
+router.put("/:id", validatePutAndDeleteCategory, updateCategory);
+router.delete("/:id", validatePutAndDeleteCategory, deleteCategory);
 
 export default router;

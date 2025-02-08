@@ -7,6 +7,7 @@ import { connectDB } from "../config/db";
 import UserRoutes from "../routes/UserRoutes";
 import CategoryRoutes from "../routes/CategoryRoutes";
 import ProductRoutes from "../routes/ProductRoutes";
+import SearchRoutes from "../routes/SearchRoutes";
 require("dotenv").config();
 
 const app = express();
@@ -30,6 +31,7 @@ app.use(
 app.use("/users", UserRoutes);
 app.use("/categories", CategoryRoutes);
 app.use("/products", ProductRoutes);
+app.use("/search", SearchRoutes);
 
 // Puerto
 const PORT = process.env.PORT;

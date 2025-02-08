@@ -4,12 +4,16 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import fileUpload from "express-fileupload";
 import { connectDB } from "../config/db";
-import UserRoutes from "../routes/UserRoutes";
-import CategoryRoutes from "../routes/CategoryRoutes";
-import ProductRoutes from "../routes/ProductRoutes";
-import SearchRoutes from "../routes/SearchRoutes";
-import UploadRoutes from "../routes/UploadRoutes";
+import routes from "../routes/index";
 require("dotenv").config();
+
+const {
+  UserRoutes,
+  CategoryRoutes,
+  ProductRoutes,
+  SearchRoutes,
+  UploadRoutes,
+} = routes;
 
 const app = express();
 

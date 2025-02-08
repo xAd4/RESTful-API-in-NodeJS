@@ -24,6 +24,7 @@ Un servidor RESTful construido con Node.js, Express y MongoDB. Incluye autentica
   - Manejo centralizado de errores
   - CORS configurado
   - Subida de archivos y conseguir imagenes de los modelos product y user
+  - Sistema de busqueda (Search)
 
 ---
 

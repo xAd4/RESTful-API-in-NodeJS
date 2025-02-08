@@ -1,4 +1,4 @@
-import { Category } from "../../../models/Category";
+import { Category } from "../../models/Category";
 
 export const IdCategoryValidator = async (id: any) => {
   const category = await Category.findById({ _id: id });

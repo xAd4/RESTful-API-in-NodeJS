@@ -1,4 +1,4 @@
-import { User } from "../../../models/User";
+import { User } from "../../models/User";
 
 export const IdValidator = async (id: any) => {
   const user = await User.findById({ _id: id });

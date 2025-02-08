@@ -1,11 +1,11 @@
 import { check } from "express-validator";
-import { emailValidator } from "./validators/Users/email.user-db";
-import { IdValidator } from "./validators/Users/id.user-db";
+import { emailValidator } from "../validators/Users/email.user-db";
+import { IdValidator } from "../validators/Users/id.user-db";
 import { validate } from "../middlewares/validate";
-import { nameValidator } from "./validators/Categories/name.category-db";
-import { IdCategoryValidator } from "./validators/Categories/id.category-db";
-import { objectIdCategoryInProduct } from "./validators/Product/category.product-db";
-import { idProductValidator } from "./validators/Product/id.product-db";
+import { nameValidator } from "../validators/Categories/name.category-db";
+import { IdCategoryValidator } from "../validators/Categories/id.category-db";
+import { objectIdCategoryInProduct } from "../validators/Product/category.product-db";
+import { idProductValidator } from "../validators/Product/id.product-db";
 
 //* Users Validate
 // POST

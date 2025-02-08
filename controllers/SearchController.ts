@@ -63,8 +63,6 @@ export const search = async (req: Request, res: Response): Promise<void> => {
       await searchProduct(term, res);
       break;
     default:
-      res
-        .status(500)
-        .json({ msg: "Búsqueda no implementada para esta colección." });
+      res.status(500).json({ msg: "Search not implemented." });
   }
 };

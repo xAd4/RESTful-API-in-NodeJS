@@ -5,6 +5,7 @@ import cors from "cors";
 import fileUpload from "express-fileupload";
 import { connectDB } from "../config/db";
 import UserRoutes from "../routes/UserRoutes";
+import CategoryRoutes from "../routes/CategoryRoutes";
 require("dotenv").config();
 
 const app = express();
@@ -26,6 +27,7 @@ app.use(
 
 // Rutas
 app.use("/users", UserRoutes);
+app.use("/categories", CategoryRoutes);
 
 // Puerto
 const PORT = process.env.PORT;
